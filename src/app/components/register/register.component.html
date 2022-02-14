@@ -1,0 +1,50 @@
+<div class="register">
+
+    <form [formGroup]="formRegister" (ngSubmit)="onSubmit()" autocomplete="off">
+        <img alt="login proimpo sas" srcset="./assets/images/login-480px.png 480w,
+        ./assets/images/login.png 512w" sizes="(max-width: 320px) 320px,
+        512px" src="./assets/images/login.png">
+        <h1>REGISTRO</h1>
+
+        <mat-form-field class="ancho">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="name">
+            <mat-error>El campo es requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="ancho">
+            <mat-label>Correo</mat-label>
+            <input matInput type="email" placeholder="Correo" formControlName="email">
+            <mat-error>El campo es requerido y debe ser de tipo email</mat-error>
+        </mat-form-field>
+        <mat-form-field class="ancho">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="password" autocomplete="off" formControlName="password">
+            <span
+                *ngIf="formRegister.invalid && (formRegister.controls['password'].dirty || formRegister.controls['password'].touched)">
+                <mat-error *ngIf="formRegister.controls['password'].errors?.['required']">El campo es requerido
+                </mat-error>
+                <mat-error *ngIf="formRegister.controls['password'].errors?.['minLength']">El campo debe tener minimo 8
+                    caracteres
+                </mat-error>
+            </span>
+
+        </mat-form-field>
+        <mat-form-field class="ancho">
+            <mat-label>Confirme contrasena</mat-label>
+            <input matInput type="password" placeholder="Confirmar contrasena" autocomplete="off"
+                formControlName="confirm_password">
+            <span
+                *ngIf="formRegister.invalid && (formRegister.controls['confirm_password'].dirty || formRegister.controls['password'].touched)">
+                <mat-error *ngIf="formRegister.hasError('required', 'password')">El campo es requerido
+                </mat-error>
+                <mat-error *ngIf="formRegister.hasError('minLength', 'password')">El campo debe tener minimo 8
+                    caracteres
+                </mat-error>
+            </span>
+
+        </mat-form-field>
+        <br>
+        <button class="ancho boton" mat-raised-button color="primary"
+            [disabled]="formRegister.invalid">Registro</button>
+    </form>
+</div>

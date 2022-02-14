@@ -1,0 +1,21 @@
+.register {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #EAEBF5;
+}
+
+img {
+  border-radius: 25%;
+  width: 20%;
+  height: auto;
+}
+
+.ancho {
+  width: 80%;
+}
+
+.boton {
+  height: 50px;
+}

@@ -1,0 +1,29 @@
+<div class="login">
+    <mat-spinner diameter="50" *ngIf="
+    loading"></mat-spinner>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+        <img alt="login proimpo sas" srcset="./assets/images/login-480px.png 480w,
+        ./assets/images/login.png 512w" sizes="(max-width: 320px) 320px,
+        512px" src="./assets/images/login.png">
+        <h1>LOGIN</h1>
+        <mat-form-field class="ancho">
+            <mat-label>User</mat-label>
+            <input matInput placeholder="user" formControlName="user">
+            <mat-error>El campo es requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="ancho">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="password" autocomplete="off" formControlName="password">
+            <span *ngIf="form.invalid && (form.controls['password'].dirty || form.controls['password'].touched)">
+                <mat-error *ngIf="form.hasError('required','password')">El campo es requerido</mat-error>
+                <mat-error *ngIf="form.hasError('minLength','password')">El campo debe tener minimo 8
+                    caracteres
+                </mat-error>
+            </span>
+
+        </mat-form-field>
+        <br>
+        <button class="ancho boton" mat-raised-button color="primary" [disabled]="form.invalid">Login</button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+.login {
+
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #EAEBF5;
+
+}
+
+img {
+  border-radius: 25%;
+  width: 50%;
+}
+
+.ancho {
+  width: 51%;
+  height: auto;
+}
+
+.boton {
+  height: 30%;
+}
+
+.spinner {
+  margin: 0 auto;
+}
