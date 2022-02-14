@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBarUtil } from '../../utils/mat-snack-bar.util';
 import { AuthService } from 'src/app/services/auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   formRegister: FormGroup;
   constructor(private fb: FormBuilder, private auth: AuthService,
-    private snackBar: MatSnackBarUtil) {
+    private snackBar: MatSnackBar) {
     this.formRegister = fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -41,7 +41,8 @@ export class RegisterComponent implements OnInit {
     this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: 'center',
-      verticalPosition: 'bottom'
+      verticalPosition: 'bottom',
+      panelClass: ['alert', 'alert-danger']
     });
   }
 

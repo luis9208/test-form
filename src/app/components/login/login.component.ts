@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
       duration: 3000,
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
+      panelClass: ['alert', 'alert-danger']
     });
   }
 }
