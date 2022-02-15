@@ -33,11 +33,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.auth.login(this.form.value).subscribe(
       {
-        next: (data) => {
+        next: (data: any) => {
           this.router.navigate(['']);
           this.auth.setUser(this.form.value.email);
         },
-        error: (data_error) => {
+        error: (data_error: any) => {
           this.error(data_error.error.message);
         }
       }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: 'http://localhost:8000/api/v1/'
+  host: 'https://proimpoform.herokuapp.com/api/v1/'
 };
 
 /*

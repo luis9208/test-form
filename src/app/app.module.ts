@@ -23,7 +23,6 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResultComponent } from './components/result/result.component';
-import { ContactComponent } from './services/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import { ContactComponent } from './services/contact/contact.component';
     HeaderComponent,
     FooterComponent,
     ResultComponent,
-    ContactComponent,
   ],
   imports: [
     BrowserModule,
