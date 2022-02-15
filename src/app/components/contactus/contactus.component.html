@@ -1,1 +1,45 @@
-<p>contactus works!</p>
+<div class="row">
+    <div class="col col-md-9">
+        <div class="card">
+            <div class="card-body">
+                <div class="col col-md-12">
+                    <form [formGroup]="formContact" (ngSubmit)="onSubmit()" autocomplete="off">
+                        <div class="row">
+                            <mat-form-field class="col-md-4">
+                                <input matInput type="text" placeholder="name" formControlName="name">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="col-md-4">
+                                <input matInput type="text" placeholder="identification"
+                                    formControlName="identification">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="col-md-4">
+                                <input matInput type="date" placeholder="fecha_nac" formControlName="fecha_nac">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="row">
+                            <mat-form-field class="col col-md-4">
+                                <input matInput type="email" placeholder="email" formControlName="email">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="col col-md-4">
+                                <input matInput type="text" placeholder="phone" formControlName="phone">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="col col-md-4">
+                                <input matInput type="text" placeholder="address" formControlName="address">
+                                <mat-error>El campo es requerido</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col col-lg-6 mx-md-auto">
+                            <button class="ancho boton" mat-raised-button color="primary"
+                                [disabled]="formContact.invalid">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

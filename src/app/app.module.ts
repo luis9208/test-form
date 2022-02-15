@@ -20,6 +20,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NofoundComponent } from './components/nofound/nofound.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ResultComponent } from './components/result/result.component';
+import { ContactComponent } from './services/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     HomeComponent,
     NofoundComponent,
     ContactusComponent,
+    HeaderComponent,
+    FooterComponent,
+    ResultComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

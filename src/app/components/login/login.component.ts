@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       {
         next: (data) => {
           this.router.navigate(['']);
+          this.auth.setUser(this.form.value.email);
         },
         error: (data_error) => {
           this.error(data_error.error.message);
@@ -51,6 +52,4 @@ export class LoginComponent implements OnInit {
       panelClass: ['alert', 'alert-danger']
     });
   }
-
-
 }
