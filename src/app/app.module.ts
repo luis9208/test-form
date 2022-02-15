@@ -19,6 +19,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NofoundComponent } from './components/nofound/nofound.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NofoundComponent } from './components/nofound/nofound.component';
     RegisterComponent,
     HomeComponent,
     NofoundComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,

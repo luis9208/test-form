@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
     this.form = fb.group(
       {
-        user: ['', Validators.required],
+        email: ['', Validators.required],
         password: ['', [Validators.required, Validators.minLength(8)]]
       }
     );
@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
         next: (data) => {
           this.router.navigate(['']);
         },
-        error: (err) => {
-          this.error(err.statusText);
+        error: (data_error) => {
+          this.error(data_error.error.message);
         }
       }
     );
@@ -51,4 +51,6 @@ export class LoginComponent implements OnInit {
       panelClass: ['alert', 'alert-danger']
     });
   }
+
+
 }
