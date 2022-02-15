@@ -35,4 +35,8 @@ export class AuthService {
   setUser(user: string) {
     this.user = user;
   }
+
+  isLogin() {
+    return this.user !== '';
+  }
 }

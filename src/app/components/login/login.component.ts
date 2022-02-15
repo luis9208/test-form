@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.form.value).subscribe(
       {
         next: (data: any) => {
-          this.router.navigate(['']);
           this.auth.setUser(this.form.value.email);
         },
         error: (data_error: any) => {
